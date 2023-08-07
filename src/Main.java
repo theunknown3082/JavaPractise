@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         float a, b, c;
@@ -18,9 +18,9 @@ public class Main{
         System.out.println("The average marks is: " + ((a+b+c)/3));
     }
 }
+*/
 
-
-/*import java.util.Scanner;
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
@@ -34,10 +34,11 @@ public class Main{
             reversed = reversed * 10 + digit;
             num /= 10;
         }
-        System.out.println("Reversed Number: " + reversed);
+
+
 
     }
-}*/
+}
 /*import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
