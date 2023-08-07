@@ -1,5 +1,18 @@
 /*import java.util.Scanner;
 public class Main{
+    public static void main(String[] args){
+
+    }
+}
+*/
+
+
+
+
+
+
+/*import java.util.Scanner;
+public class Main{
     public static void main(String[] args) {
         float a, b, c;
 
@@ -24,22 +37,32 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
-        int num ;
+        int a, num = 0;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number to be reversed: ");
-        num = input.nextInt();
+        a = input.nextInt();
+        num = a;
         int reversed = 0;
         while (num != 0) {
             int digit = num % 10;
             reversed = reversed * 10 + digit;
             num /= 10;
+
         }
+        System.out.println("the reversed number is: "+ reversed);
+    if (reversed == a){
+        System.out.println("the number is palandrome!!");
+    }
+    else {
+        System.out.println(" The number is not palandrome----");
 
-
+    }
 
     }
 }
-/*import java.util.Scanner;
+
+/*
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
