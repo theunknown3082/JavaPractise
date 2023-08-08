@@ -1,10 +1,32 @@
-/*import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
+        double[] New = new double[5];
+        int i;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the first Marks: ");
+        New[0] = input.nextDouble();
+        System.out.println("Enter the second Marks: ");
+        New[1] = input.nextDouble();
+        System.out.println("Enter the third Marks: ");
+        New[2] = input.nextDouble();
+        System.out.println("Enter the forth Marks: ");
+        New[3] = input.nextDouble();
+        System.out.println("Last Marks: ");
+        New[4] = input.nextDouble();
 
+
+        System.out.println(Arrays.toString(New));
+        for(i=0; i<New.length;i++){
+            System.out.println("Array element[" +i+"]="+New[i]);
+        }
+        double Sum = (New[0]+New[1]+New[2]+New[3]+New[4]);
+        System.out.println("The sum of marks is: "+Sum);
+        double Average=Sum/5;
+        System.out.println("Average: "+Average);
     }
 }
-*/
 
 
 
@@ -33,7 +55,7 @@ public class Main{
 }
 */
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
@@ -60,7 +82,7 @@ public class Main{
 
     }
 }
-
+*/
 /*
 import java.util.Scanner;
 public class Main{
