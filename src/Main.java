@@ -1,4 +1,4 @@
-import java.util.Arrays;
+/*import java.util.Arrays;
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
@@ -33,7 +33,45 @@ public class Main{
     }
 }
 
+*/
+/*import java.util.Arrays;*/
 
+
+
+
+
+
+
+
+
+
+/*
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args)
+    {
+        char[] charArray={'h','i',' ','j','a','v','a'};
+        byte[] ascii={65,66,67,68,69,70};
+        String str="Welcome";
+        String str1=new String("Welcome to Java");
+        String str2=new String(charArray);
+        String str3=new String(charArray,3,2);
+        String str4=new String(ascii);
+        String str5=new String(ascii,2,3);
+        String str6=new String();
+        String str7=new String(str);
+        System.out.println("str = "+str);
+        System.out.println("str1 = "+str1);
+        System.out.println("str2 = "+str2);
+        System.out.println("str3 = "+str3);
+        System.out.println("str4 = "+str4);
+        System.out.println("str5 = "+str5);
+        System.out.println("str6 = "+str6);
+        System.out.println("str7 = "+str7);
+    }
+}
+*/
 
 
 
@@ -118,9 +156,9 @@ public class Main{
     }
 }
 */
-/*import java.util.Scanner;
+/*import java.util.Scanner;*/
 
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -157,10 +195,33 @@ public class Main {
 
         scanner.close();
     }
-}
-*/
+}*/
+
 
 
 /*--------------------------------------------------*/
 
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        class rect {
+            int length,width;
+            void input(){
+                Scanner input = new Scanner(System.in);
+                System.out.println("Enter the length of desired rectangle: ");
+                length = input.nextInt();
+                System.out.println("Enter the width of desired rectangle: ");
+                width = input.nextInt();
+            }
+            int area(){
+                int area;
+                area = length*width;
+                return area;
+            }
+        }
+        rect r = new rect();
+        r.input();
+        System.out.println("Area is: "+ r.area());
+    }
+}
