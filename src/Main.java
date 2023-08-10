@@ -214,14 +214,15 @@ public class Main {
                 System.out.println("Enter the width of desired rectangle: ");
                 width = input.nextInt();
             }
-            int area(){
+            void area(){
                 int area;
                 area = length*width;
-                return area;
+                System.out.println("Area is: "+ area);
             }
         }
+
         rect r = new rect();
         r.input();
-        System.out.println("Area is: "+ r.area());
+        r.area();
     }
 }
