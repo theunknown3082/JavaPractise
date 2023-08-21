@@ -226,7 +226,7 @@ public class Main {
         int[] bestScores = findBestTwoScores(student);
         System.out.println("Best two scores: " + bestScores[0] + ", " + bestScores[1]);
     }
-
+    
     // Method to create a new Student instance using user input
     public static Student createStudentFromUserInput() {
         Scanner scanner = new Scanner(System.in);
