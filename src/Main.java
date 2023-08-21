@@ -219,8 +219,12 @@ public class Main {
         System.out.println("Marks in CA 3: " + student.getMarks3());
 
         // Calculate and print the total marks of the student
-        int totalMarks = student.calculateTotalMarks();
+        int totalMarks = calculateTotalMarks(student);
         System.out.println("Total marks: " + totalMarks);
+
+        // Find and print the best 2 scores of the student
+        int[] bestScores = findBestTwoScores(student);
+        System.out.println("Best two scores: " + bestScores[0] + ", " + bestScores[1]);
     }
 
     // Method to create a new Student instance using user input
@@ -228,60 +232,79 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user to enter the name of the student
-        System.out.print("Enter the name of the student: ");
+        System.out.println("Enter the name of the student: ");
         String name = scanner.nextLine();
 
         // Prompt the user to enter the marks for each subject
-        System.out.print("Enter the marks for Subject 1: ");
+        System.out.println("Enter the marks for Subject 1: ");
         int marks1 = scanner.nextInt();
 
-        System.out.print("Enter the marks for Subject 2: ");
+        System.out.println("Enter the marks for Subject 2: ");
         int marks2 = scanner.nextInt();
 
-        System.out.print("Enter the marks for Subject 3: ");
+        System.out.println("Enter the marks for Subject 3: ");
         int marks3 = scanner.nextInt();
 
         // Create a new Student instance with the entered values and return it
         return new Student(name, marks1, marks2, marks3);
     }
-}
-
-class Student {
-    String name;
-    int CA1;
-    int CA2;
-    int CA3;
-
-    // Constructor that takes the name and marks of the student as arguments
-    public Student(String name, int marks1, int marks2, int marks3) {
-        this.name = name;
-        this.CA1 = marks1;
-        this.CA2 = marks2;
-        this.CA3 = marks3;
-    }
-
-    // Getter method to retrieve the name of the student
-    public String getName() {
-        return name;
-    }
-
-    // Getter method to retrieve marks1
-    public int getMarks1() {
-        return CA1;
-    }
-
-    // Getter method to retrieve marks2
-    public int getMarks2() {
-        return CA2;
-    }
-
-    // Getter method to retrieve marks3
-    public int getMarks3() {
-        return CA3;
-    }
 
     // Method to calculate and return the sum of marks
-    public int calculateTotalMarks() {
-        return CA1 + CA2 + CA3;
+    public static int calculateTotalMarks(Student student) {
+        return student.getMarks1() + student.getMarks2() + student.getMarks3();
+    }
+
+    // Method to find and return the best two scores of the student
+    public static int[] findBestTwoScores(Student student) {
+        int[] scores = {student.getMarks1(), student.getMarks2(), student.getMarks3()};
+        int[] bestScores = {0, 0};
+
+        for (int score : scores) {
+            if (score > bestScores[0]) {
+                bestScores[1] = bestScores[0];
+                bestScores[0] = score;
+            } else if (score > bestScores[1]) {
+                bestScores[1] = score;
+            }
+        }
+
+        return bestScores;
+    }
+
+
+    static class Student {
+        String name;
+        int CA1;
+        int CA2;
+        int CA3;
+
+        // Constructor that takes the name and marks of the student as arguments
+        public Student(String name, int marks1, int marks2, int marks3) {
+            this.name = name;
+            this.CA1 = marks1;
+            this.CA2 = marks2;
+            this.CA3 = marks3;
+        }
+
+        // Getter method to retrieve the name of the student
+        public String getName() {
+            return name;
+        }
+
+        // Getter method to retrieve marks1
+        public int getMarks1() {
+            return CA1;
+        }
+
+        // Getter method to retrieve marks2
+        public int getMarks2() {
+            return CA2;
+        }
+
+        // Getter method to retrieve marks3
+        public int getMarks3() {
+            return CA3;
+        }
     }
 }
+
