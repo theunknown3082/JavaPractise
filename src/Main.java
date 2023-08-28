@@ -205,7 +205,7 @@ public class Main {
 }
 */
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -307,4 +307,93 @@ public class Main {
         }
     }
 }
+*/
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an array of Student objects
+        Student[] students = new Student[3];
+
+        // Initialize the objects in the array
+        students[0] = createStudent();
+        students[1] = createStudent();
+        students[2] = createStudent();
+
+        // Print the details and calculations for each student
+        for (Student student : students) {
+            System.out.println("Name: " + student.getName());
+            System.out.println("Marks: " + Arrays.toString(student.getMarks()));
+            System.out.println("Average: " + student.calculateAverage());
+            System.out.println("Max Mark: " + student.findMaxMark());
+            System.out.println("Min Mark: " + student.findMinMark());
+            System.out.println();
+        }
+    }
+
+    public static Student createStudent() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+
+        int[] marks = new int[5];
+        System.out.println("Enter marks for 5 subjects:");
+        for (int i = 0; i < marks.length; i++) {
+            System.out.print("Subject " + (i + 1) + ": ");
+            marks[i] = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
+        }
+
+        return new Student(name, marks);
+    }
+
+
+    static class Student {
+        private String name;
+        private int[] marks;
+
+        public Student(String name, int[] marks) {
+            this.name = name;
+            this.marks = marks;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int[] getMarks() {
+            return marks;
+        }
+
+        public double calculateAverage() {
+            int sum = 0;
+            for (int mark : marks) {
+                sum += mark;
+            }
+            return (double) sum / marks.length;
+        }
+
+        public int findMaxMark() {
+            int max = marks[0];
+            for (int i = 1; i < marks.length; i++) {
+                if (marks[i] > max) {
+                    max = marks[i];
+                }
+            }
+            return max;
+        }
+
+        public int findMinMark() {
+            int min = marks[0];
+            for (int i = 1; i < marks.length; i++) {
+                if (marks[i] < min) {
+                    min = marks[i];
+                }
+            }
+            return min;
+        }
+    }
+}
