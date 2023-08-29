@@ -204,7 +204,6 @@ public class Main {
     }
 }
 */
-
 /*import java.util.Scanner;
 
 public class Main {
@@ -308,8 +307,7 @@ public class Main {
     }
 }
 */
-
-import java.util.Arrays;
+/*import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -397,3 +395,90 @@ public class Main {
         }
     }
 }
+*/
+
+/* Create a employee class to print only those whose salary is same using passing array as function argument (CA - 2) */
+
+class Employee {
+    private String Name;
+    private double Salary;
+
+    public Employee(String name, double Salary) {
+        this.Name = name;
+        this.Salary = Salary;
+    }
+
+    public double getSalary() {
+        return Salary;
+    }
+
+    public void printEmployee() {
+        System.out.println("Name: " + Name + ", Salary: " + Salary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee[] employees = {
+                new Employee("Anurag", 5000),
+                new Employee("Shubham", 6000),
+                new Employee("Emma", 5000),
+                new Employee("Suprabha", 7000),
+                new Employee("Olive", 6000),
+                new Employee("Saksham", 7000),
+                new Employee("Ali", 8000),
+                new Employee("Bosu", 8000),
+                new Employee("Pratyush", 100)
+        };
+
+        employeesWithSameSalary(employees);
+    }
+
+    public static void employeesWithSameSalary(Employee[] employees) {
+        for (int i = 0; i < employees.length; i++)
+        {
+            for (int j = i + 1; j < employees.length; j++)
+            {
+                if (employees[i].getSalary() == employees[j].getSalary())
+                {
+                    employees[i].printEmployee();
+                    employees[j].printEmployee();
+                    System.out.println();
+                }
+            }
+        }
+    }
+}
+//12215668//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
