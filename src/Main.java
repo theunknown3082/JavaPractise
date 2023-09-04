@@ -396,10 +396,7 @@ public class Main {
     }
 }
 */
-
-/* Create a employee class to print only those whose salary is same using passing array as function argument (CA - 2) */
-
-class Employee {
+/*class Employee {
     private String Name;
     private double Salary;
 
@@ -451,18 +448,37 @@ public class Main {
 }
 //12215668//
 
+*/
 
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter a word or phrase: ");
+        final String input = scanner.nextLine();
 
+        System.out.println("Enter new string: ");
+        String input2 = scanner.nextLine();
 
+        String lowercase = input.toLowerCase();
+        String uppercase = input.toUpperCase();
 
+        System.out.println("Lowercase: " + lowercase);
+        System.out.println("Uppercase: " + uppercase);
 
+        String New = input.replace('i','j');
+        System.out.println("Replace: " + New);
 
+        String Trim = input.trim();
+        System.out.println("trim: " + Trim);
 
-
-
-
+        int Length = input.length();
+        System.out.println("Length: " + Length);
+        scanner.close();
+    }
+}
 
 
 
