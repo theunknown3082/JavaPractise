@@ -449,14 +449,13 @@ public class Main {
 //12215668//
 
 */
-
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a word or phrase: ");
+        System.out.println("Enter a word or phrase: ");.
         final String input = scanner.nextLine();
 
         System.out.println("Enter new string: ");
@@ -479,6 +478,46 @@ public class Main {
         scanner.close();
     }
 }
+*/
+import java.util.*;
+public class Main {
+    private int value;
+
+    // Default constructor
+    public Main() {
+        this.value = 0;
+    }
+
+    // Constructor with one parameter
+    public Main(int value) {
+        this.value = value;
+    }
+
+    // Constructor with two parameters
+    public Main(int value1, int value2) {
+        this.value = value1 + value2;
+    }
+
+    Main(Main obj){
+        value = obj.value;
+    }
+
+    // Other methods...
+
+    // Method overloading
+    public static void main(String[] args) {
+        // Creating objects using different constructors
+        Main obj1 = new Main();             // Default constructor
+        Main obj2 = new Main(10);           // Constructor with one parameter
+        Main obj3 = new Main(5, 7);         // Constructor with two parameters
+
+        // Accessing the object's state
+        System.out.println(obj1.value);     // Output: 0
+        System.out.println(obj2.value);     // Output: 10
+        System.out.println(obj3.value);     // Output: 12
+    }
+}
+
 
 
 
