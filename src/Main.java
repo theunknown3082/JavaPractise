@@ -479,7 +479,7 @@ public class Main {
     }
 }
 */
-import java.util.*;
+/*import java.util.*;
 public class Main {
     private int value;
 
@@ -517,16 +517,99 @@ public class Main {
         System.out.println(obj3.value);     // Output: 12
     }
 }
+*/
+/*import java.util.Scanner;
+
+// Parent class
+class Student {
+    protected String name;
+    protected int rollNumber;
+
+    public void getInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name: ");
+        name = scanner.nextLine();
+        System.out.println("Enter roll number: ");
+        rollNumber = scanner.nextInt();
+    }
+}
+
+// Child class inheriting from Student
+class DGPAStudent extends Student {
+    private int[] grades;
+    private int totalCredits;
+
+    public void getGradesAndCredits() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter total number of credits: ");
+        totalCredits = scanner.nextInt();
+
+        grades = new int[totalCredits];
+        for (int i = 0; i < totalCredits; i++) {
+            System.out.println("Enter grade for credit " + (i + 1) + ": ");
+            grades[i] = scanner.nextInt();
+        }
+    }
+
+    public double calculateDGPA() {
+        int sum = 0;
+        for (int i = 0; i < totalCredits; i++) {
+            sum += grades[i];
+        }
+
+        return (double) sum / totalCredits;
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        DGPAStudent student = new DGPAStudent();
+        student.getInput();
+        student.getGradesAndCredits();
+
+        double dgpa = student.calculateDGPA();
+
+        System.out.println("Name: " + student.name);
+        System.out.println("Roll Number: " + student.rollNumber);
+        System.out.println("DGPA: " + dgpa);
+    }
+}
+*/
+class Animal {
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Cat extends Animal {
+    public void meow() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        c.eat();
+        c.meow();
+
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
 
 
 
 
-
-
-
-
-
-
+        
 
 
 
