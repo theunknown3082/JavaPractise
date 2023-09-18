@@ -576,19 +576,27 @@ public class Main {
     }
 }
 */
+interface Meowable {
+    void meow();
+}
+
+interface Barkable {
+    void bark();
+}
+
 class Animal {
     public void eat() {
         System.out.println("Animal is eating");
     }
 }
 
-class Cat extends Animal {
+class Cat extends Animal implements Meowable {
     public void meow() {
         System.out.println("Cat is meowing");
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal implements Barkable {
     public void bark() {
         System.out.println("Dog is barking");
     }
