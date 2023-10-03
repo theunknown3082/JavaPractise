@@ -647,7 +647,7 @@ public class Main {
     }
 }
 */
-import java.util.*;
+/*import java.util.*;
 class Emp
 {
     int sal;
@@ -676,7 +676,7 @@ class Emp
         b1.fun_inner();
     }
 }
-        
+*/
 
 
 
