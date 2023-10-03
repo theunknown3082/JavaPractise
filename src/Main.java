@@ -614,7 +614,7 @@ public class Main {
     }
 }
 */
-
+/*
 import java.util.Scanner;
 
 public class Main {
@@ -646,8 +646,36 @@ public class Main {
         return count;
     }
 }
+*/
+import java.util.*;
+class Emp
+{
+    int sal;
+    Scanner sc=new Scanner(System.in);
+    void fun_outer()
+    {
+        System.out.println("Enter the Salary: ");
+        sal=sc.nextInt();
+        System.out.println("The salary of the Employee is: "+sal);
+    }
+    class Bonus
+    {
+        int b;
+        void fun_inner()
+        {
+            b=(sal*10)/100;
+            System.out.println("The bonus is: "+b);
+        }
+    }
+    public static void main(String args[])
+    {
+        Emp a=new Emp();
+        a.fun_outer();
 
-
+        Emp.Bonus b1=a.new Bonus();
+        b1.fun_inner();
+    }
+}
         
 
 
