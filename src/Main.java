@@ -679,13 +679,11 @@ class Emp
 */
 
 import shapesdemo.*;
+import java.util.Scanner;
 class Main{
     public static void main(String[] args){
-        System.out.println("Shapes i guess ~~~");
-        circle c1=new circle();
-        c1.display();
-        rectangle r1=new rectangle();
-        r1.display();
+        Sum s1 = new Sum();
+        System.out.println(s1 );
 
     }
 }
