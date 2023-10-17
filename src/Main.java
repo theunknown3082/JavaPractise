@@ -677,7 +677,7 @@ class Emp
     }
 }
 */
-
+/*
 import shapesdemo.*;
 import java.util.Scanner;
 class Main{
@@ -687,11 +687,38 @@ class Main{
 
     }
 }
+*/
+/*import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+            Scanner input=new Scanner(System.in);
+            System.out.println("Enter the first number: ");
+            int x = input.nextInt();
+            System.out.println("Enter the seconf number: ");
+            int y = input.nextInt();
+            System.out.println("output: "+(x/y));
+    }
+}
+*/
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        try
+        {
+            int value=12/1;
+        }
+        catch(ArithmeticException e) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter the first number: ");
+            int x = input.nextInt();
+            System.out.println("Enter the second number: ");
+            int y = input.nextInt();
+            System.out.println("output: " + (x / y));
 
 
-
-
-
-
-
-
+        }
+    }
+}
