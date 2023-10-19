@@ -701,8 +701,7 @@ public class Main {
     }
 }
 */
-
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
@@ -721,4 +720,86 @@ public class Main{
 
         }
     }
+}*/
+/*
+// TODO: 17-10-2023  'create a student result calc and pass array and method argument using hierarchical inheritance'
+class Student {
+    public String name;
+    public int rollNumber;
+
+    public Student(String name, int rollNumber) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+    }
+
+    public String getResult() {
+        return "No Result";
+    }
 }
+
+class RegularStudent extends Student {
+    public int marks;
+
+    public RegularStudent(String name, int rollNumber, int marks) {
+        super(name, rollNumber);
+        this.marks = marks;
+    }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Marks: " + marks);
+    }
+
+
+    public String getResult() {
+        if (marks >= 40) {
+            return "Pass";
+        } else {
+            return "Fail";
+        }
+    }
+}
+
+class SportsStudent extends Student {
+    public int sportsScore;
+
+    public SportsStudent(String name, int rollNumber, int sportsScore) {
+        super(name, rollNumber);
+        this.sportsScore = sportsScore;
+    }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Sports Score: " + sportsScore);
+    }
+
+
+    public String getResult() {
+        if (sportsScore >= 60) {
+            return "Pass";
+        } else {
+            return "Fail";
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student[] students = new Student[4];
+        students[0] = new RegularStudent("ansh", 1, 80);
+        students[1] = new SportsStudent("ayesha", 2, 70);
+        students[2] = new SportsStudent("abdul", 3, 35);
+        students[3] = new RegularStudent("yashu", 4, 40);
+        for (Student student : students) {
+            student.displayInfo();
+            System.out.println("Result: " + student.getResult());
+            System.out.println();
+        }
+    }
+}
+*/
