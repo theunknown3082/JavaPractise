@@ -702,12 +702,11 @@ public class Main {
 }
 */
 /*import java.util.Scanner;
-
 public class Main{
     public static void main(String[] args){
         try
         {
-            int value=12/1;
+            int value=12/0;
         }
         catch(ArithmeticException e) {
             Scanner input = new Scanner(System.in);
@@ -716,8 +715,9 @@ public class Main{
             System.out.println("Enter the second number: ");
             int y = input.nextInt();
             System.out.println("output: " + (x / y));
-
-
+        }
+        finally {
+            System.out.println("Finally block");
         }
     }
 }*/
@@ -803,3 +803,32 @@ public class Main {
     }
 }
 */
+import java.util.Scanner;
+
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+
+        try {
+            int age = scanner.nextInt();
+
+            if (age < 18) {
+                throw new AgeException("Age should be at least 18");
+            }
+
+            System.out.println("Valid age entered: " + age);
+        } catch (AgeException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: Invalid input");
+        }
+    }
+}
+
