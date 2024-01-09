@@ -832,7 +832,7 @@ public class Main {
     }
 }
 */
-import java.util.*;
+/*import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
@@ -852,5 +852,149 @@ public class Main {
         } while (continueInput);
 
         scanner.close();
+    }
+}*/
+/*public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+
+    public static int divide(int num1, int num2) {
+        return num1 / num2;
+    }
+}
+*/
+/*
+import java.io.FileWriter;
+
+// Importing the IOException class for handling errors
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+
+        try {
+            FileWriter fwrite = new FileWriter("C:FileOperationExample.txt");
+
+            fwrite.write("A named location used to store related information is referred to as a File.");
+
+            // Closing the stream
+            fwrite.close();
+            System.out.println("Content is successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("Unexpected error occurred");
+            e.printStackTrace();
+        }
+    }
+}
+*/
+/*import java.io.File;
+
+import java.io.FileNotFoundException;
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        try {
+
+            File f1 = new File("C:FileOperationExample.txt");
+            Scanner dataReader = new Scanner(f1);
+            while (dataReader.hasNextLine()) {
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+            }
+            dataReader.close();
+        } catch (FileNotFoundException exception) {
+            System.out.println("Unexcpected error occurred!");
+            exception.printStackTrace();
+        }
+    }
+}
+*/
+/*import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        System.out.println("Press 1 for addition, press 2 for substraction, press 3 to exit: ");
+        int a = input.nextInt();
+        if (a==1){
+            System.out.println("enter num1: ");
+            int num1 = input.nextInt();
+            System.out.println("enter num2: ");
+            int num2 = input.nextInt();
+            System.out.println("sum= "+(num1+num2));
+        } else if (a==2) {
+            System.out.println("enter num1: ");
+            int num1 = input.nextInt();
+            System.out.println("enter num2: ");
+            int num2 = input.nextInt();
+            System.out.println("minus= "+(num1-num2));
+        } else if (a==3) {
+            System.out.println("......program ends here.......");
+        }else {
+            System.out.println("--please enter valid input--");
+        }
+    }
+}
+*/
+/*import java.util.Scanner;
+
+class Main
+{
+    static void ghj() {
+        int a, b;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        a = scanner.nextInt();
+        System.out.println("Enter the second number: ");
+        b = scanner.nextInt();
+    }
+    interface ParentInterface {
+        void parentMethod();
+    }
+
+    interface ChildInterface extends ParentInterface {
+        void childMethod();
+    }
+
+    static void fgh() {
+        float a, b;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        a = scanner.nextFloat(); // Use nextFloat() to read float values
+        System.out.println("Enter the second number: ");
+        b = scanner.nextFloat(); // Use nextFloat() to read float values
+    }
+
+    static void dfg() {
+        ghj();
+        fgh();
+    }
+
+    public static void main(String[] args)
+    {
+        Main student = new Main();
+        Main.dfg();
+    }
+}
+
+ */
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    System.out.println("This is the output, i.e, write--");
+    System.out.println("Input an integer: ");
+    int A = input.nextInt();
+    //input stream
+    System.out.println(A);
+    //this is the output stream
     }
 }
